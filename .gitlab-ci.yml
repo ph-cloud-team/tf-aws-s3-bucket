@@ -1,0 +1,14 @@
+############################################
+# Terraform AWS Module Pipeline
+# Repo: tf-aws-s3-bucket
+#
+# Purpose:
+# - Consume centralized enterprise Terraform module pipeline
+# - Repo defines the execution stage contract
+# - Shared pipeline provides jobs, controls, and validation logic
+############################################
+
+include:
+  - project: infra_team/platform-pipelines
+    ref: main
+    file: terraform/modules/aws.yml
